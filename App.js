@@ -1,30 +1,27 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableHighlight, TextInput } from 'react-native';
 import styled from 'styled-components/native';
+import Footer from './src/components/Footer';
+import Header from './src/components/Header';
+import Main from './src/components/Main';
 
-const Teste = styled.View`
-  background-color: red;
-  color: #fff;
-  justify-content: center;
-  align-items: center;
-`;
 
-const Greeting = ({name}) => {
-  return (
-    <Teste>
-      <Text>Hello {name}!</Text>
-    </Teste>
-  );
-};
 
 const LotsOfGreetings = () => {
   return (
-    <Teste>
-      <Greeting name='Marcus' />
-      <Greeting name='Jaina' />
-      <Greeting name='Valeera' />
-    </Teste>
+    <View style={styles.container} >
+      <Header />
+      <Main />
+      <Footer />
+    </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  },
+
+});
 
 export default LotsOfGreetings;
